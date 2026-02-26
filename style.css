@@ -1,45 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Barlow&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-html {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgb(37, 37, 37);
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  font-family: 'Poppins', sans-serif;
 }
 
-.button-container {
-  border: 2px solid black;
-  padding: 10px;
-  border-radius: 7px;
-  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+.app{
+  background:#111;
+  padding:30px 40px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
+  width:320px;
 }
 
-button {
-  cursor: pointer;
-  outline: none;
-  width: 120px;
-  height: 75px;
-  font-family: Barlow, sans-serif;
-  font-size: 25px;
-  color: white;
-  text-shadow: 0 2px 5px black;
-  background: linear-gradient(to top, #696969, #575757);
-  border: 2px solid black;
-  border-radius: 7px;
-  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4), 0 12px 12px 0 rgba(0, 0, 0, 0.3);
+h1{
+  color:#00ffd5;
+  margin-bottom:10px;
 }
 
-button:hover {
-  background: linear-gradient(to bottom, #696969, #575757);
+#status{
+  color:#aaa;
+  margin-bottom:20px;
 }
 
-button:active {
-  transform: translateY(3px);
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
+.controls{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+button{
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  font-size:15px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.2s;
+}
+
+#startBtn{ background:#00ffd5; }
+#pipBtn{ background:#4facfe; color:white; }
+#stopBtn{ background:#ff4d4d; color:white; }
+
+button:disabled{
+  opacity:0.4;
+  cursor:not-allowed;
+}
+
+button:hover:not(:disabled){
+  transform:scale(1.03);
 }
